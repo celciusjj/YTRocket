@@ -7,7 +7,7 @@ export const Sidebar = () => {
   const { open, setOpen, itemActive, setItemActive } = useSidebar();
   return (
     <nav
-      className={`flex flex-col justify-between bg-red-300 pl-4 pr-6 py-5 duration-500 ${
+      className={`flex flex-col justify-between pl-4 pr-6 py-5 duration-500 ${
         open ? "w-52" : "w-20"
       }`}
     >
