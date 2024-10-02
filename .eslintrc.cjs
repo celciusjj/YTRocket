@@ -1,0 +1,38 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    'jest/globals': true,
+    'cypress/globals': true,
+  },
+  extends: ['plugin:react/recommended', 'plugin:jest/recommended', 'standard-with-typescript', 'prettier'],
+  overrides: [],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['tsconfig.json'],
+    tsconfigRootDir: __dirname,
+  },
+  plugins: ['react', 'jest', 'cypress'],
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/consistent-type-assertions': 'off',
+    '@typescript-eslint/no-confusing-void-expression': 'off',
+    '@typescript-eslint/promise-function-async': 'off',
+    'no-console': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'react/display-name': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    // cypress
+    'jest/no-export': 'off',
+    'jest/expect-expect': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/no-invalid-void-type': 'off',
+  },
+};
