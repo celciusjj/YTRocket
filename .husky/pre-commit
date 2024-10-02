@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+allowed_branch_pattern="^(feature|bugfix|hotfix|release)/[a-zA-Z0-9_-]+$"
+
+if ! echo "$current_branch" | grep -Eq "$allowed_branch_pattern"; then
+  echo "Error: You are trying to commit on a branch ('$current_branch') that does not match the required pattern."
+  echo "Branch names should start with 'feature/', 'bugfix/', 'hotfix/', or 'release/' followed by a valid name."
+  echo "Please rename your branch before committing."
+  exit 1
+fi
+
+npx lint-staged
