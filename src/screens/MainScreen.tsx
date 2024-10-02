@@ -2,7 +2,7 @@ import { Sidebar } from "../components/Sidebar";
 
 function MainScreen() {
   return (
-    <div>
+    <div className="flex min-h-screen">
       <Sidebar />
     </div>
   );
