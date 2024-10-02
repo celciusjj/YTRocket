@@ -5,7 +5,7 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          main: ['Titillium Web', 'sans-serif']
+          main: ['lato', 'sans-serif']
         },
       },
     },
