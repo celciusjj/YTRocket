@@ -47,7 +47,7 @@ const messages = {
         title: 'YOUR MUSICAL PATH',
         text: 'Become a shark,',
         text2: 'Take your music to the surface',
-        button: 'Go to My Path',
+        button: 'Lets go',
       },
       collaborator: {
         title: 'Some of their most notable tracks:',
