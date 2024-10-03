@@ -1,7 +1,29 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "useUnknownInCatchVariables": false,
+    "jsx": "react-jsx",
+    "noImplicitThis": false,
+    "types": ["vite/client"]
+  },
+  "include": ["src", "vite.config.ts", "amplify/backend/types/amplify-dependent-resources-ref.d.ts"],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "exclude": ["node_modules"]
 }
