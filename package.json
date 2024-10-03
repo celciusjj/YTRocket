@@ -10,7 +10,8 @@
     "prepare": "husky",
     "types": "tsc --noEmit",
     "check": "pnpm types && pnpm lint && pnpm test",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "postinstall": "cp -R ./src/utils/index.d.ts ./node_modules/vite/dist/node/"
   },
   "dependencies": {
     "formik": "^2.4.6",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
+    "@types/node": "^20.6.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
@@ -48,7 +50,7 @@
     "tailwindcss": "^3.4.13",
     "tsc-files": "^1.1.4",
     "typescript": "^5.5.3",
-    "vite": "^5.4.1"
+    "vite": "^4.5.0"
   },
   "lint-staged": {
     "**/*.ts": "tsc-files --noEmit",
