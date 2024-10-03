@@ -1,4 +1,3 @@
-// @typescript-eslint/no-explicit-any
 import { FormikProps } from 'formik';
 import React from 'react';
 
