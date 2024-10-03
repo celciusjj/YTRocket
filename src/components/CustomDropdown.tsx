@@ -40,7 +40,7 @@ export const CustomDropdown: React.FC<CustomDropdownProps> = ({ title, options, 
         {options.map((option, index) => (
           <div
             key={index}
-            className='px-1 py-1 m-1 rounded-md hover:bg-[#a9c3ff33] cursor-pointer font-main text-sm text-deep'
+            className='px-1 py-1 m-1 rounded-md hover:bg-[#a9c3ff33] cursor-pointer font-main text-sm text-deep transition-transform duration-200 transform hover:-translate-y-0.5'
             onClick={() => handleOptionClick(option)}
           >
             {option}
