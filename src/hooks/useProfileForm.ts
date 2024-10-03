@@ -21,6 +21,8 @@ export const useProfileForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const onSubmit = (values: ProfileForm) => {
     persistData.save('data_rocket', values);
+    const language = languageMapping[form.values.language];
+    changeLanguages(language);
     toggleModal();
   };
 
@@ -50,11 +52,6 @@ export const useProfileForm = () => {
   useEffect(() => {
     form.setFieldValue('department', '');
   }, [form.values.country]);
-
-  useEffect(() => {
-    const language = languageMapping[form.values.language];
-    changeLanguages(language);
-  }, [form.values.language]);
 
   const toggleModal = () => {
     setIsOpen(prevState => !prevState);

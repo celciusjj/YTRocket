@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# React Web App Made with Love.
+https://yt-rocket.vercel.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requirements
 
-Currently, two official plugins are available:
+- Node.js: Ensure Node.js is installed on your machine. You can download it from [nodejs.org](https://nodejs.org).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Branch Naming Rules
 
-## Expanding the ESLint configuration
+- **Feature Branch:** `feature/add-login-screen`
+- **Bugfix Branch:** `bugfix/fix-crash-on-startup`
+- **Hotfix Branch:** `hotfix/fix-db-connection-issue`
+- **Release Branch:** `release/v1.0.0-latest`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Commit Message Rules
 
-- Configure the top-level `parserOptions` property like this:
+Use the following format for your commit messages:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **feat:** Add new login screen
+- **fix:** Resolve crash issue on startup
+- **docs:** Update README with new instructions
+- **style:** Format code according to eslint rules
+- **refactor:** Simplify login screen component
+- **test:** Add unit tests for authentication
+- **chore:** Update dependencies
+- **ci:** Add CI/CD pipeline with GitHub Actions
+- **revert:** Revert previous commit
+
+## Run the Project
+
+- Execute the following bash to install the dependencies and run the project:
+
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Features
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Built with **React** and **TypeScript**
+- Implements the **Facade pattern** to separate component logic
+- Interactive web application designed with **Tailwind CSS**
+- Supports **translations** in both English and Spanish
+- Configured with **ESLint** and **Prettier** for code quality
+- **Husky** set up for pre-commit hooks
+- Basic form created using **Formik**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## To Do (Out of Scope)
+
+- Unit tests
+- Mobile responsiveness
+- End-to-End (E2E) tests
