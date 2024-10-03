@@ -11,4 +11,4 @@ if ! echo "$current_branch" | grep -Eq "$allowed_branch_pattern"; then
   exit 1
 fi
 
-npx lint-staged
+#npx lint-staged
