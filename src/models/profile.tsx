@@ -6,7 +6,7 @@ export interface ICollaborators {
   id: number;
   name: string;
   image: string;
-  songs: { title: string; authors: string }[];
+  songs: Array<{ title: string; authors: string }>;
 }
 
 export const profileInfo = {
@@ -25,17 +25,17 @@ export const profileStats = [
   {
     id: 1,
     number: '3785',
-    reason: 'Minutos escuchados',
+    reason: 'profile.stats.minutes',
   },
   {
     id: 2,
     number: '57',
-    reason: 'Minutos escuchados',
+    reason: 'profile.stats.tracks',
   },
   {
     id: 3,
     number: '9',
-    reason: 'Artistas colaboradores',
+    reason: 'profile.stats.colleages',
   },
 ];
 

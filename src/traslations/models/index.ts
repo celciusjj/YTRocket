@@ -1,7 +1,11 @@
 export enum Languages {
   ES = 'es',
   EN = 'en',
-  PT = 'pt',
 }
 
-export type LanguageValues = typeof Languages[keyof typeof Languages];
+export const languageMapping: Record<string, Languages> = {
+  Inglés: Languages.EN,
+  Español: Languages.ES,
+};
+
+export type LanguageValues = (typeof Languages)[keyof typeof Languages];

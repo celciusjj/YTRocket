@@ -1,11 +1,13 @@
 import image from '../assets/Imagenes/Welcome Image.png';
 import closeIcon from '../assets/Iconos/close.svg';
+import { useTranslations } from '../traslations/hooks';
 
 interface Props {
   toggleModal: () => void;
 }
 
 export const ModalProfile = ({ toggleModal }: Props) => {
+  const { translate } = useTranslations();
   return (
     <>
       <div className='fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50'>
@@ -16,14 +18,11 @@ export const ModalProfile = ({ toggleModal }: Props) => {
           >
             <img className='w-4 h-4' src={closeIcon} />
           </button>
-          <h2 className='text-xl font-bold mb-4 text-primary font-main'>¡Felicidades, Paola!</h2>
+          <h2 className='text-xl font-bold mb-4 text-primary font-main'>{translate('profile.modal.title')}</h2>
           <img src={image} alt='welcome' className='mb-4' />
-          <p className='text-secondary mb-4 text-center'>
-            Has completado tu perfil. Ahora estás listo para explorar todo lo que necesitas para llevar tu música al
-            siguiente nivel.
-          </p>
+          <p className='text-secondary mb-4 text-center'>{translate('profile.modal.subtitle')}</p>
           <button onClick={toggleModal} className='bg-primary text-white  w-52 py-2 rounded-3xl cursor-pointer'>
-            Aceptar
+            {translate('profile.modal.button')}
           </button>
         </div>
       </div>
