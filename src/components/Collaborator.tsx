@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { ICollaborators } from '../models/profile';
+import { useTranslations } from '../traslations/hooks';
 
 interface Props {
   item: ICollaborators;
 }
 
 export const Collaborator = ({ item }: Props) => {
+  const { translate } = useTranslations();
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -27,7 +29,7 @@ export const Collaborator = ({ item }: Props) => {
           <span className='text-deep-dark font-main text-lg font-semibold mt-2'>{item.name}</span>
         </div>
         <div className='flex flex-col'>
-          <span className='font-main font-normal mb-2'>Algunas de sus pistas más notables:</span>
+          <span className='font-main font-normal mb-2'>{translate('collaborator.title')}</span>
           {item.songs?.map((song, index) => (
             <div key={index} className='flex flex-col mb-2'>
               <p className='font-[400] text-deep-dark'>{song.title}</p>

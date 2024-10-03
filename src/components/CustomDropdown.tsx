@@ -3,6 +3,7 @@ import { FormikProps } from 'formik';
 import React from 'react';
 import { useCustomDropdown } from '../hooks/useCustomDropdown';
 import dropdownIcon from '../assets/Iconos/dropdown.svg';
+import { useTranslations } from '../traslations/hooks';
 
 interface CustomDropdownProps {
   title: string;
@@ -13,6 +14,7 @@ interface CustomDropdownProps {
 
 export const CustomDropdown: React.FC<CustomDropdownProps> = ({ title, options, field, form }) => {
   const { handleOptionClick, isOpen, dropdownRef, setIsOpen } = useCustomDropdown(form, field);
+  const { translate } = useTranslations();
 
   return (
     <div ref={dropdownRef} className='relative flex flex-col gap-2 cursor-pointer group'>
@@ -24,7 +26,7 @@ export const CustomDropdown: React.FC<CustomDropdownProps> = ({ title, options, 
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className='font-main text-secondary text-sm group-hover:text-[#1f252d]'>
-          {form.values[field] || 'Selecciona una opción'}
+          {form.values[field] || translate('dropdown.title')}
         </span>
         <img className='w-5 h-5' src={dropdownIcon}></img>
       </div>

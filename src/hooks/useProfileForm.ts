@@ -1,6 +1,8 @@
 import { useFormik } from 'formik';
 import { useEffect, useState } from 'react';
 import { persistData } from '../store.ts/persist';
+import { useTranslations } from '../traslations/hooks';
+import { languageMapping } from '../traslations/models';
 
 export interface ProfileForm {
   name: string;
@@ -15,6 +17,7 @@ export interface ProfileForm {
 }
 
 export const useProfileForm = () => {
+  const { changeLanguages } = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const onSubmit = (values: ProfileForm) => {
     persistData.save('data_rocket', values);
@@ -47,6 +50,11 @@ export const useProfileForm = () => {
   useEffect(() => {
     form.setFieldValue('department', '');
   }, [form.values.country]);
+
+  useEffect(() => {
+    const language = languageMapping[form.values.language];
+    changeLanguages(language);
+  }, [form.values.language]);
 
   const toggleModal = () => {
     setIsOpen(prevState => !prevState);
