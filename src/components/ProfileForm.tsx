@@ -42,7 +42,7 @@ export const ProfileForm = () => {
           <button
             type='submit'
             onClick={() => form.handleSubmit()}
-            className='bg-primary text-light rounded-md mt-6 flex justify-end py-2 px-8 hover:bg-primary-100'
+            className=' text-sm font-main bg-primary text-light rounded-md mt-6 flex justify-end py-[6px] px-7 hover:bg-primary-100'
           >
             {translate('profile.form.button')}
           </button>
