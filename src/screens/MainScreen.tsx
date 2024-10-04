@@ -8,9 +8,9 @@ import { useInitialData } from '../hooks/useInitialData';
 function MainScreen() {
   useInitialData();
   return (
-    <div className='flex min-h-screen bg-light pt-5 pb-8 w-full'>
+    <div className='flex min-h-screen bg-light pt-5 pb-8 w-full min-w-fit'>
       <Sidebar />
-      <div className='flex flex-row gap-5 pr-9 w-full'>
+      <div className='flex flex-row gap-5 pr-9 w-full '>
         <ProfileStats />
         <div className='flex flex-col w-full gap-2'>
           <Banner />

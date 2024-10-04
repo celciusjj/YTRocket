@@ -25,7 +25,7 @@ export const CustomDropdown: React.FC<CustomDropdownProps> = ({ title, options, 
         }`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className='font-main text-secondary text-sm group-hover:text-[#1f252d]'>
+        <span className='truncate font-main text-secondary text-sm group-hover:text-[#1f252d]'>
           {form.values[field] || translate('dropdown.title')}
         </span>
         <img className='w-5 h-5' src={dropdownIcon}></img>
@@ -40,7 +40,7 @@ export const CustomDropdown: React.FC<CustomDropdownProps> = ({ title, options, 
         {options.map((option, index) => (
           <div
             key={index}
-            className='px-1 py-1 m-1 rounded-md hover:bg-[#a9c3ff33] cursor-pointer font-main text-sm text-deep transition-transform duration-200 transform hover:-translate-y-0.5'
+            className='truncate px-1 py-1 m-1 rounded-md hover:bg-[#a9c3ff33] cursor-pointer font-main text-sm text-deep transition-transform duration-200 transform hover:-translate-y-0.5'
             onClick={() => handleOptionClick(option)}
           >
             {option}
