@@ -1,6 +1,5 @@
 import banner1 from '../assets/Imagenes/banner1.svg';
 import banner2 from '../assets/Imagenes/banner2.svg';
-import banner3 from '../assets/Imagenes/banner3.svg';
 import { useTranslations } from '../traslations/hooks';
 
 export const Banner = () => {
@@ -35,7 +34,7 @@ export const Banner = () => {
       <div className='flex flex-row absolute right-[1px] top-0'>
         <img src={banner1} alt='Banner 1' />
         <img src={banner2} alt='Banner 2' />
-        <img src={banner3} alt='Banner 3' />
+        <div className='flex flex-1 bg-[rgba(1,18,67,0.6)] w-[92px] rounded-l-full rounded-r-[1600px]'></div>
       </div>
     </div>
   );
