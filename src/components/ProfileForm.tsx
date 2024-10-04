@@ -1,4 +1,5 @@
 import { useProfileForm } from '../hooks/useProfileForm';
+import { phoneMask } from '../models/profile';
 import { countries, departments, ECountries, languages } from '../models/utilities';
 import { useTranslations } from '../traslations/hooks';
 import { CustomDropdown } from './CustomDropdown';
@@ -30,7 +31,7 @@ export const ProfileForm = () => {
           <FormInput form={form} field='address' title={translate('profile.form.address')} />
           <FormInput form={form} field='city' title={translate('profile.form.city')} />
           <FormInput form={form} field='postal' title={translate('profile.form.postal')} />
-          <FormInput form={form} field='celphone' title={translate('profile.form.celphone')} />
+          <FormInput mask={phoneMask} form={form} field='celphone' title={translate('profile.form.celphone')} />
           <CustomDropdown
             options={languages}
             form={form}
@@ -42,7 +43,7 @@ export const ProfileForm = () => {
           <button
             type='submit'
             onClick={() => form.handleSubmit()}
-            className='bg-primary text-light rounded-md mt-6 flex justify-end py-2 px-8 hover:bg-primary-100'
+            className=' text-sm font-main bg-primary text-light rounded-md mt-6 flex justify-end py-[6px] px-7 hover:bg-primary-100'
           >
             {translate('profile.form.button')}
           </button>

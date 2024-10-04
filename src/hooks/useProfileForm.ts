@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { persistData } from '../store.ts/persist';
 import { useTranslations } from '../traslations/hooks';
 import { languageMapping } from '../traslations/models';
+import { ECountries } from '../models/utilities';
 
 export interface ProfileForm {
   name: string;
@@ -50,6 +51,8 @@ export const useProfileForm = () => {
   }, []);
 
   useEffect(() => {
+    if (form.values.country === ECountries.COLOMBIA) return;
+    if (!form.values.country) return;
     form.setFieldValue('department', '');
   }, [form.values.country]);
 

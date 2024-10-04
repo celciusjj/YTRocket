@@ -9,6 +9,26 @@ export interface ICollaborators {
   songs: Array<{ title: string; authors: string }>;
 }
 
+export const phoneMask = [
+  '+',
+  /[0-9]/,
+  /[0-9]/,
+  ' ',
+  /[3]/,
+  /[0-9]/,
+  /[0-9]/,
+  ' ',
+  /[0-9]/,
+  /[0-9]/,
+  /[0-9]/,
+  ' ',
+  /[0-9]/,
+  /[0-9]/,
+  ' ',
+  /[0-9]/,
+  /[0-9]/,
+];
+
 export const profileInfo = {
   name: 'Paola Andrea',
   lastName: 'Zapata Jaramillo',
